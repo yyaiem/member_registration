@@ -116,10 +116,18 @@
 
                                 <div class="qustion">
 
-                                    <label class="input_label" for="Residential Address">Residential Address with
-                                        Pincode</label>
+                                    <label class="input_label" for="Residential Address">Residential Address</label>
                                     <div class="input_div">
                                         <input class="input_field" type="text" name="Residential_Address" id="res_add"
+                                            placeholder="Your Pincode" min="100000" max="1000001" required>
+                                    </div>
+                                </div>
+
+                                <div class="qustion">
+
+                                    <label class="input_label" for="PinCode">Pincode</label>
+                                    <div class="input_div">
+                                        <input class="input_field" type="number" name="PinCode" id="res_add"
                                             placeholder="Your Address" required>
                                     </div>
                                 </div>
@@ -341,7 +349,7 @@
 
         })
 
-
+// 
     </script>
 </body>
 
