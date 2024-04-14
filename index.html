@@ -116,10 +116,18 @@
 
                                 <div class="qustion">
 
-                                    <label class="input_label" for="Residential Address">Residential Address with
-                                        Pincode</label>
+                                    <label class="input_label" for="Residential Address">Residential Address</label>
                                     <div class="input_div">
                                         <input class="input_field" type="text" name="Residential_Address" id="res_add"
+                                            placeholder="Your Pincode" min="100000" max="1000001" required>
+                                    </div>
+                                </div>
+
+                                <div class="qustion">
+
+                                    <label class="input_label" for="PinCode">Pincode</label>
+                                    <div class="input_div">
+                                        <input class="input_field" type="number" name="PinCode" id="res_add"
                                             placeholder="Your Address" required>
                                     </div>
                                 </div>
@@ -313,7 +321,7 @@
 
     </div>
     <script>
-        let url = 'https://script.google.com/macros/s/AKfycbz8rcdDq8UjOmTW3BdRCY75IdDlPd3D4rx9H7FgvZ_47e9KuZSkFZuONyIuHYfopvKi/exec'
+        let url = 'https://script.google.com/macros/s/AKfycbzkOBoiUJQHiSepX-9v29AQQYuRv_j6Fv8HGLLcKgH-63eJAei9QY8GrTagSUxKLk4E/exec'
         let form = document.querySelector('#membership_form')
         form.addEventListener("submit", (e) => {
             e.target.status_box.innerHTML = "Submitting..";
@@ -341,7 +349,7 @@
 
         })
 
-
+// 
     </script>
 </body>
 
