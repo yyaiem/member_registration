@@ -71,12 +71,23 @@ body {
     cursor: default;
 }
 
-.home_head_text {
+.home_head_text,
+.message_text_container {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 4dvh;
 }
-
+.message_text_container {
+    font-size: 40px;
+}
+.message_text_container_divi{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px;
+    width: 100%;
+}
 
 .page_body {
     list-style-type: none;

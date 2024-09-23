@@ -51,9 +51,11 @@
                 </div>
             </div>
 
-            <div class="page_body" id="page_body>
-                <p class="msg_box" id="msg_box</p>
-                <div class="form_body" id="form_body">
+            <div class="page_body" id="">
+                <div class="message_text_container_divi" id="message_text_container_divi">
+                    <p class="message_text_container" id="message_text_container"></p>
+                </div>
+                <div class="form_body" id="form_element_container">
                     <form action="" method="post" id="membership_form">
 
                         <!-- Personal Information -->
@@ -325,7 +327,6 @@
 
     </div>
     <script>
-        // document.getElementById("form_body").style.display = "none";
         let url = 'https://script.google.com/macros/s/AKfycbzkOBoiUJQHiSepX-9v29AQQYuRv_j6Fv8HGLLcKgH-63eJAei9QY8GrTagSUxKLk4E/exec'
         let form = document.querySelector('#membership_form')
         form.addEventListener("submit", (e) => {
@@ -337,15 +338,16 @@
                 .then((finalRes) => {
                     e.target.status_box.innerHTML = "Submitted";
                     form.reset();
-                    // document.getElementById("form_body").style.display="none"
-                    // document.getElementById("msg_box").innerText = "Your form has been successfully submitted!!"
+                    document.getElementById("form_element_container").style.display = "none";
+                    document.getElementById("message_text_container_divi").style.display = "flex";
+                    document.getElementById("message_text_container").innerText = "Your form has been successfully submitted!!"
                     setTimeout(() => {
-                        e.target.status_box.innerHTML = "Submit";
-
-                    }, 1000)
-                    // alert
-                    console.log(finalRes)
-                    alert(finalRes)
+                        // e.target.status_box.innerHTML = "Submit";
+                        window.location.href = 'https://yyaiem.github.io/yy/';
+                    }, 2000)
+                    // // alert
+                    // console.log(finalRes)
+                    // alert(finalRes)
                     window.scrollTo({
                         top: 0,
                         behavior: 'smooth'
