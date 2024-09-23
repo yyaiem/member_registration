@@ -51,8 +51,9 @@
                 </div>
             </div>
 
-            <div class="page_body">
-                <div class="form_body">
+            <div class="page_body" id="page_body>
+                <p class="msg_box" id="msg_box</p>
+                <div class="form_body" id="form_body">
                     <form action="" method="post" id="membership_form">
 
                         <!-- Personal Information -->
@@ -116,10 +117,10 @@
 
                                 <div class="qustion">
 
-                                    <label class="input_label" for="Residential Address">Residential Address</label>
+                                    <label class="input_label" for="Residential Address">Permanent Address</label>
                                     <div class="input_div">
                                         <input class="input_field" type="text" name="Residential_Address" id="res_add"
-                                            placeholder="Your Residential Address"  required>
+                                            placeholder="Your Residential Address" required>
                                     </div>
                                 </div>
 
@@ -128,7 +129,7 @@
                                     <label class="input_label" for="PinCode">Pincode</label>
                                     <div class="input_div">
                                         <input class="input_field" type="number" name="PinCode" id="res_add"
-                                            placeholder="Your Pin Code" min="100000" max="1000001"required>
+                                            placeholder="Your Pin Code" min="100000" max="1000001" required>
                                     </div>
                                 </div>
 
@@ -208,7 +209,8 @@
 
                                 <div class="qustion">
 
-                                    <label class="input_label" for="prg_lang">Programming Languages Known (if
+                                    <label class="input_label" for="prg_lang">Programming Languages / Technology Known
+                                        (if
                                         any)</label>
                                     <div class="input_div">
 
@@ -222,8 +224,7 @@
 
                                     <p class="input_label">Skills and Interests:</p>
                                     <p class="qust_dec">Please list any specific coding languages, frameworks, or
-                                        areas of interest you would like to explore or contribute to in the
-                                        Coding Club</p>
+                                        areas of interest you would like to explore or learn</p>
                                     <div class="input_div">
                                         <input class="input_field" type="text" name="Skills_and_Interests" id="skills"
                                             placeholder="Enter your interests in technology" required>
@@ -239,7 +240,7 @@
                                 <p class="form_catagory_heading">Availability</p>
                                 <div class="qustion">
 
-                                    <p class="input_label">Indicate your availability for Coding Club
+                                    <p class="input_label">Indicate your availability for Hardware Club
                                         meetings,
                                         workshops, and events.
                                     </p>
@@ -268,7 +269,8 @@
                             <div class="qustion">
 
                                 <p class="qust_dec message">I hereby affirm my unwavering commitment to YantraYodha,
-                                    our esteemed coding and hardware project club at AIEM. I pledge to actively engage
+                                    our esteemed coding and hardware project club at AIEM ECE Department. I pledge to
+                                    actively engage
                                     in
                                     all club activities and programs, dedicating my time and expertise to contribute
                                     meaningfully to our collective success. Understanding the importance of teamwork and
@@ -309,7 +311,7 @@
         <footer>
             <div class="copy_text">
                 <p class="copyright foot_txt footer_items">&COPY; 2024 Pinaka</p>
-                <p class="copyright foot_txt footer_items">v 0.4</p>
+                <p class="copyright foot_txt footer_items">v 2.0</p>
                 <a href="https://yyaiem.github.io/privacy-Pollicy" target="_blank" rel="noopener noreferrer">
                     <p class="copyright foot_txt footer_items">Privacy Policy</p>
                 </a>
@@ -323,6 +325,7 @@
 
     </div>
     <script>
+        // document.getElementById("form_body").style.display = "none";
         let url = 'https://script.google.com/macros/s/AKfycbzkOBoiUJQHiSepX-9v29AQQYuRv_j6Fv8HGLLcKgH-63eJAei9QY8GrTagSUxKLk4E/exec'
         let form = document.querySelector('#membership_form')
         form.addEventListener("submit", (e) => {
@@ -334,6 +337,8 @@
                 .then((finalRes) => {
                     e.target.status_box.innerHTML = "Submitted";
                     form.reset();
+                    // document.getElementById("form_body").style.display="none"
+                    // document.getElementById("msg_box").innerText = "Your form has been successfully submitted!!"
                     setTimeout(() => {
                         e.target.status_box.innerHTML = "Submit";
 
@@ -351,7 +356,7 @@
 
         })
 
-// 
+        // 
     </script>
 </body>
 
